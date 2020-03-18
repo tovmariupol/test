@@ -1,0 +1,13 @@
+- name: Set static mode
+  lineinfile: "dest={{ net_file }} state=present regexp='^ *dhcp4: true' line='            dhcp4: false' backup=yes"
+
+- name: Set IP address
+  lineinfile: "dest={{ net_file }} state=present firstmatch=yes regexp='^ *addresses:' line='            addresses: [ {{ addresses }}, ]'"
+     
+- name: Set gateway
+  lineinfile: "dest={{ net_file }} state=present insertafter='^ *addresses:' line='            gateway4: {{ gateway4 }}'"
+
+- name: Apply netplan
+  command: netplan apply
+  ignore_errors: true 
+

@@ -1,0 +1,7 @@
+- name: Create destination directory
+  file: path="{{  dest }}" state=directory owner=root group=root mode=0755
+  become: yes
+
+- name: Copy script
+  copy: src="{{ src  }}" dest="{{ dest }}"  mode=0644
+

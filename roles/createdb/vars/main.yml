@@ -1,0 +1,4 @@
+---
+db_user: adminuser
+db_name: DBtest
+db_password: pg_passw!%4

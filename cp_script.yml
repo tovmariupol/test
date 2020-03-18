@@ -1,0 +1,9 @@
+---
+
+- name: Copy python script
+  hosts: ubuntu
+  become: yes
+  become_user: root
+
+  roles:
+     - cp_script

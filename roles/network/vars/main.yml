@@ -1,0 +1,4 @@
+---
+addresses: 10.0.0.2/16
+gateway4: 10.0.0.1
+net_file: /etc/netplan/50-cloud-init.yaml

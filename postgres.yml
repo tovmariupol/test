@@ -1,0 +1,9 @@
+---
+
+- name: Create PostgreSQL server
+  hosts: ubuntu
+  become: yes
+  become_user: root
+
+  roles:
+     - createdb

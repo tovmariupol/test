@@ -1,0 +1,3 @@
+---
+src:  '/root/ansible/python/hello.py'
+dest: '/etc/nginx/script/'

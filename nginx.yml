@@ -1,0 +1,9 @@
+---
+
+- name: Install NGINX
+  hosts: ubuntu
+  become: yes
+  become_user: root
+
+  roles:
+     - nginx
